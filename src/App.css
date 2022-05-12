@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    overflow: auto;
+}
+
+.back-img {
+    background-image: url(https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?cs=srgb&dl=pexels-joyston-judah-933054.jpg&fm=jpg);
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 35%;
+    z-index: -1;
+    transition: none;
+}
+
+.todo {
+    width: 50%;
+    min-width: 300px;
+    max-width: 840px;
+    background-color: gainsboro;
+    padding: 0 30px;
+    border-radius: 15px;
+    margin: 70px auto 50px;
+    box-shadow: rgb(0 0 0 / 50%) 0px 10px 15px;
+}
+
+.title__todo {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.container__todo-input {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.input {
+    padding: 20px;
+    border-radius: 5px;
+    background: dimgray;
+    border: none;
+}
+
+.input__wrapper {
+    position: relative;
+}
+
+.input__wrapper i {
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    color: #000000;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-size: inherit;
+    padding-left: 35px;
+    font-family: sans-serif;
+}
+
+.btn__add {
+    padding-top: 20px;
+}
+
+.btn__add button {
+    padding: 12px;
+    text-transform: uppercase;
+    background-color: #0098d3;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    letter-spacing: 1.2px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn__add button:hover,
+.btns-list-first button:hover,
+.item button:hover {
+    background-color: #008ac0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btns-list-first,
+.btns-list-second {
+    display: flex;
+    gap: 5%;
+    padding: 20px 0;
+}
+
+.btns-list-first button {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #0098d3;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.container__search-bar {
+    padding-top: 20px;
+}
+
+.container__search-bar input {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-size: inherit;
+    font-family: sans-serif;
+}
+
+.counter {
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.todo-item {
+    text-align: center;
+}
+
+.todo-item .empty {
+    font-weight: 700;
+}
+
+.btns-list-second button {
+    width: 100%;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #ff4242;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btns-list-second button:hover, .modal__buttons button:hover {
+    background-color: #eb3d3d;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px grey solid;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    background-color: white;
+    align-items: center;
+    font-size: large;
+    color: black;
+}
+
+.item p {
+    word-break: break-all;
+    padding-right: 5px;
+    transition: none;
+    font-size: 18px;
+}
+
+.item span {
+    transition: none;
+}
+
+.item input {
+    border: none;
+    border-bottom: 1px black solid;
+    outline: none;
+    font-size: inherit;
+    background: transparent;
+}
+
+.item button {
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #0098d3;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.edit-items {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.edit-items input {
+    accent-color: #74992e;
+    height: 18px;
+    width: 18px;
+}
+
+.fa-pen {
+    cursor: pointer;
+    color: orange;
+}
+
+.fa-trash {
+    cursor: pointer;
+    color: red;
+}
+
+i {
+    font-size: 18px;
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
+.active {
+    background-color: #2e2e2e !important;
+}
+
+.btn.toggle-btn {
+    border-width: 1px;
+    border-color: #d3d3d3;
+}
+
+.btn.toggle-btn[aria-pressed=true] {
+    text-decoration: underline;
+    border-color: #4d4d4d;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 15px;
+}
+
+.modal__buttons button {
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: #ff4242;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
